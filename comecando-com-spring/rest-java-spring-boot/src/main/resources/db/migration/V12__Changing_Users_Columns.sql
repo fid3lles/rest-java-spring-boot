@@ -1,0 +1,3 @@
+ALTER TABLE `users` 
+	ADD COLUMN `last_name` VARCHAR(255) NULL DEFAULT NULL AFTER `first_name`,
+	CHANGE COLUMN `full_name` `first_name` VARCHAR(255) NULL DEFAULT NULL ;

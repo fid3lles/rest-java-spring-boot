@@ -1,0 +1,3 @@
+ALTER TABLE `books` 
+CHANGE COLUMN `title` `title` LONGTEXT NULL DEFAULT NULL AFTER `id`,
+CHANGE COLUMN `price` `price` DECIMAL(65,2) NOT NULL AFTER `author`;

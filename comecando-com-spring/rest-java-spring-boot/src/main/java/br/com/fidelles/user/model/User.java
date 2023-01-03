@@ -32,7 +32,7 @@ public class User implements UserDetails, Serializable {
 	private Long id;
 
 	@Column(name = "user_name", unique = true)
-	private String userName;
+	private String username;
 
 	@Column(name = "first_name")
 	private String firstName;
@@ -82,7 +82,7 @@ public class User implements UserDetails, Serializable {
 
 	@Override
 	public String getUsername() {
-		return this.userName;
+		return this.username;
 	}
 
 	@Override
@@ -114,11 +114,11 @@ public class User implements UserDetails, Serializable {
 	}
 
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
 	public void setUserName(String userName) {
-		this.userName = userName;
+		this.username = userName;
 	}
 
 	public String getFirstName() {
@@ -184,7 +184,7 @@ public class User implements UserDetails, Serializable {
 	@Override
 	public int hashCode() {
 		return Objects.hash(accountNonExpired, accountNonLocked, credentialsNonExpired, enabled, firstName, id,
-				lastName, password, permissions, userName);
+				lastName, password, permissions, username);
 	}
 
 	@Override
@@ -202,7 +202,7 @@ public class User implements UserDetails, Serializable {
 				&& Objects.equals(enabled, other.enabled) && Objects.equals(firstName, other.firstName)
 				&& Objects.equals(id, other.id) && Objects.equals(lastName, other.lastName)
 				&& Objects.equals(password, other.password) && Objects.equals(permissions, other.permissions)
-				&& Objects.equals(userName, other.userName);
+				&& Objects.equals(username, other.username);
 	}
 	
 }

@@ -10,6 +10,6 @@ import br.com.fidelles.user.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 	
-	@Query("SELECT u FROM User WHERE u.userName =:userName")
-	User findByUsername(@Param("userName") String userName);
+	@Query("SELECT u FROM User u WHERE u.username =:username")
+	User findByUsername(@Param("username") String username);
 }
